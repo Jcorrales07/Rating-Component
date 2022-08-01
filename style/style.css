@@ -1,3 +1,14 @@
+:root {
+    --Primary-color: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-grey: hsl(217, 12%, 63%);
+    --Medium-grey: hsl(216, 12%, 54%);
+    --Dark-blue: hsl(213, 19%, 18%);
+    --Button-color: hsl(215, 19%, 24%);
+    --Very-Dark-blue: hsl(216, 12%, 8%);
+    --Margin-bottom: 2rem;
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -5,6 +16,150 @@
 }
 
 html {
-    font-size: 65.2%;
+    font-size: 62.5%;
 }
 
+body {
+    font-size: 1.5rem;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Very-Dark-blue);
+    color: var(--White);
+}
+
+.rating-state.visible {
+    display: block;
+}
+
+.rating-state {
+    display: none;
+}
+
+.container {
+    width: 35rem;
+    margin: var(--Margin-bottom) auto;
+    padding: 2.5rem;
+    background-color: var(--Dark-blue);
+    border-radius: 1.7rem;
+}
+
+.icon-star {
+    display: inline-block;
+    margin-bottom: var(--Margin-bottom);
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--Button-color);
+    border-radius: 50%;
+    padding: 1.1rem;
+}
+
+.rating-state-text .title {
+    font-weight: 400;
+    font-size: 2.3rem;
+    margin-bottom: var(--Margin-bottom);
+} 
+
+.rating-state-text .instructions {
+    color: var(--Medium-grey);
+    margin-bottom: var(--Margin-bottom);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--Margin-bottom);
+}
+
+.btn-container .option {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--Button-color);
+    color: var(--Light-grey);
+}
+
+.option:hover {
+    background-color: var(--Primary-color);
+    color: var(--White);
+}
+
+.btn-submit {
+    border: none;
+    width: 100%;
+    color: var(--White);
+    background-color: var(--Primary-color);
+    border-radius: 3rem;
+    padding: 1.2rem;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    color: var(--Primary-color);
+    background-color: var(--White);
+}
+
+/* el otro state*/
+
+.thank-you-state {
+    display: none;
+}
+
+
+.thank-you-state.visible {
+    display: block;
+    animation: fade-slide-in 0.3s ease-out forwards;
+}
+
+.thku-inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.separation {
+    margin-bottom: var(--Margin-bottom);
+}
+
+.thku-image {
+    margin-top: var(--Margin-bottom);
+}
+
+.rating-selection-div {
+    background-color: var(--Button-color);
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    color: var(--Primary-color);
+}
+
+.title {
+    font-weight: 400;
+}
+
+.text {
+    color: var(--Medium-grey);
+    text-align: center;
+}
+
+.attribution {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: var(--Primary-color);
+}
+
+@keyframes fade-slide-in {
+    from {
+      transform: translateY(-5rem);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }

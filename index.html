@@ -14,60 +14,77 @@
 
     <title>Frontend Mentor | Interactive rating component</title>
 
-    <link rel="stylesheet" href="./style/style.css">
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./app.js" defer></script>
   </head>
   <body>
     <!-- Rating state start -->
-    <div id="rating-state-container">
-      <div>
-        <div><img src="./images/icon-star.svg" alt=""></div>
+    <div class="rating-state visible container">
+      <div class="rs-inner-container">
+        <div class="icon-star">
+          <img src="./images/icon-star.svg" alt="icon star" />
+        </div>
 
-        <div>
-          <h3>How did we do?</h3>
-          <p>
+        <div class="rating-state-text">
+          <h3 class="title">How did we do?</h3>
+          <p class="instructions">
             Please let us know how we did with your support request. All
             feedback is appreciated to help us improve our offering!
           </p>
         </div>
       </div>
 
-      <div>
-        <div><p>1</p></div>
-        <div><p>2</p></div>
-        <div><p>3</p></div>
-        <div><p>4</p></div>
-        <div><p>5</p></div>
+      <div class="btn-container">
+        <button class="option one" value="1">1</button>
+        <button class="option two" value="2">2</button>
+        <button class="option three" value="3">3</button>
+        <button class="option four" value="4">4</button>
+        <button class="option five" value="5">5</button>
       </div>
 
-      <button type="submit">Submit</button>
+      <button id="submitBtn" class="btn-submit" type="submit">SUBMIT</button>
     </div>
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
+    <div class="thank-you-state container">
+      <div class="thku-inner-container">
+        <div class="thku-image separation">
+          <img
+            src="./images/illustration-thank-you.svg"
+            alt="Thank you illustration"
+          />
+        </div>
 
-    You selected
-    <!-- Add rating here -->
-    out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don’t hesitate to get in touch!
+        <div class="rating-selection-div separation">
+          <p class="text-result">
+            You selected <span class="user-rating">?</span> out of 5
+          </p>
+        </div>
 
+        <!-- <div class="thankful-text"> -->
+        <h1 class="title separation">Thank you!</h1>
+        <p class="text separation">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+        <!-- </div> -->
+      </div>
+    </div>
     <!-- Thank you state end -->
 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by
+      <a href="https://www.instagram.com/jcorrales07" target="_blank">Joe Corrales</a>.
     </div>
   </body>
 </html>

@@ -11,11 +11,7 @@ ratingBtns.forEach((btn, index) => {
 });
 
 function ratingValueFunction(idx) {
-  if (idx == 0) valueRating = 1;
-  else if (idx == 1) valueRating = 2;
-  else if (idx == 2) valueRating = 3;
-  else if (idx == 3) valueRating = 4;
-  else valueRating = 5;
+  valueRating = idx + 1;
 
   ratingBtns.forEach((btn) => {
     btn.style.backgroundColor = 'hsl(215, 19%, 24%)';

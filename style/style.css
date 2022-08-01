@@ -36,7 +36,10 @@ body {
 
 .container {
     width: 35rem;
-    margin: var(--Margin-bottom) auto;
+    margin-top: 20rem;
+    margin-bottom: 5rem;
+    margin-left: auto;
+    margin-right: auto;
     padding: 2.5rem;
     background-color: var(--Dark-blue);
     border-radius: 1.7rem;
